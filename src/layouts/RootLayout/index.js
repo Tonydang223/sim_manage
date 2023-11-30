@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Breadcrumb, Button, Layout, Menu } from 'antd';
-const { Content, Header, Sider } = Layout;
 import { IoHome } from 'react-icons/io5';
 import { FaUserTie } from 'react-icons/fa6';
 import { HiMiniUserGroup } from 'react-icons/hi2';
@@ -12,10 +11,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import './styles/main.scss';
 
-import PropTypes from 'prop-types';
-
 import styled from '@emotion/styled';
 import LogoSample from '../../assets/logosample.svg';
+
+const { Content, Header, Sider } = Layout;
 
 export default function RootLayout(props) {
     const navigate = useNavigate();

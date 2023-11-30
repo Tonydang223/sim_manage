@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import RootLayout from './layouts/RootLayout';
 import Home from './pages/Home';
 import Group from './pages/Groups';
 import Employee from './pages/Employees';
@@ -7,6 +6,7 @@ import Customer from './pages/Customers';
 import Subscription from './pages/Subscription';
 import CellPhonePlan from './pages/CellPhonePlan';
 import Role from './pages/Roles';
+import RootLayout from './layouts/RootLayout';
 
 function App() {
     return (
