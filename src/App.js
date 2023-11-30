@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import RootLayout from './layouts/RootLayout';
+import Home from './pages/Home';
+import Group from './pages/Groups';
+import Employee from './pages/Employees';
+import Customer from './pages/Customers';
+import Subscription from './pages/Subscription';
+import CellPhonePlan from './pages/CellPhonePlan';
+import Role from './pages/Roles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<RootLayout />}>
+                    <Route index element={<Home />} />
+                    <Route path="group" element={<Group />} />
+                    <Route path="employee" element={<Employee />} />
+                    <Route path="customer" element={<Customer />} />
+                    <Route path="subscription" element={<Subscription />} />
+                    <Route path="cellphone_plan" element={<CellPhonePlan />} />
+                    <Route path="role" element={<Role />} />
+                </Route>
+            </Routes>
+        </>
+    );
 }
 
 export default App;
